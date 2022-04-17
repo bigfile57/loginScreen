@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_modal</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
+</head>
+<body>
+    <main class="wrap_main">
+        <article class="wrap_modal_main">
+            <h2 class="visually_hidden">모달 로그인 페이지</h2>
+            <header class="wrap_header">
+                <h3 class="txt_header">로그인 또는 회원가입</h3>
+                <div class="div_close"></div>
+            </header>
+            <hr>
+            <section class="wrap_modal_content">
+                <p class="txt_content_head">위니브에서 여러운의 궁금증을 해결하세요! :)</p>
+                <form action="" name="" method="">
+                    <fieldset>
+                        <legend>로그인 비밀번호 입력</legend>
+                        <label class="visually_hidden" for="input_login_id">
+                            아이디
+                        </label> 
+                        <input type="text" name="input_login_id" id="input_login_id"
+                                placeholder="아이디">
+                        <label class="visually_hidden" for="deposit_money">
+                            비밀번호
+                        </label> 
+                        <input type="password" name="input_login_pw" id="input_login_pw"
+                                placeholder="비밀번호">        
+                        <input type="checkbox" id="stay-signed-in"> 
+                        <label for="stay-signed-in">로그인 상태 유지</label>
+                        <button class="button_modal_login" type="submit">
+                            로그인
+                        </button>
+                    </fieldset>
+                </form>
+                <div class="wrap_member">
+                    <a href="#">회원가입</a>
+                    <span>|</span>
+                    <a href="#">아이디/비밀번호 찾기</a>
+                </div>
+                <div class="line-or">또는</div>
+                <!-- 소셜로그인 구역만 flex -->
+                <div class="wrap_social_login">
+                    <a href="https://www.google.co.kr/" target="_blank" class="btn btn1">구글 계정으로 로그인</a>
+                    <a href="https://ko-kr.facebook.com/" target="_blank" class="btn btn2">페이스북 계정으로 로그인</a>
+                    <a href="https://www.naver.com/" target="_blank" class="btn btn3">네이버 계정으로 로그인</a>
+                    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" target="_blank" class="btn btn4">카카오톡 계정으로 로그인</a>
+                </div>
+            </section>
+        </article>
+
+    </main>
+</body>
+</html>
