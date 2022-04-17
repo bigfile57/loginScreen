@@ -18,7 +18,8 @@
     top: 50%;
     transform: translate(-50%,-50%);
     width: 500px;
-    border: 1px solid silver;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
     
 }
 .section_content{

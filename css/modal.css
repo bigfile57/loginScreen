@@ -22,14 +22,25 @@ a:visited{
     transform: translate(-50%,-50%);
 }
 .wrap_modal_main{
-        width: 520px;
-        background-color: white;
-        border: 1px solid #c4c4c4;
-        border-radius: 10px;
+    width: 520px;
+    background-color: white;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
 }
-.div_close{
-    background: url(../images/close.png) no-repeat center / 14px;
-    margin-top: 2px;
+.wrap_header .txt_header{
+    display: inline-block;
+    text-align: center;
+    margin: 20px 188px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.wrap_header .div_close{
+    position: absolute;
+    top: 22px;
+    right: 24px;
+}
+.wrap_header .div_close>img{
     width: 18px;
     height: 18px;
 }
@@ -56,7 +67,7 @@ hr{
 }
 
 input[type=checkbox]+label{
-    background: url(../images/icon_check_empty.png) no-repeat left;
+    background: url(../images/icon_check_empty.png) no-repeat;
     display: block;
     cursor: pointer;
     color: gray;
@@ -72,7 +83,7 @@ input[type=checkbox]{
     display: none;
 }
 input[type=checkbox]:checked + label{
-    background: url(../images/icon_check.png) no-repeat left;
+    background: url(../images/icon_check.png) no-repeat;
     font-weight: bold;
 }
 input[type=checkbox]:disabled + label{
@@ -97,7 +108,7 @@ input[type=checkbox]:disabled + label{
 }
 .line-or{
     display: flex; 
-    gap: 1em;
+    gap: 12px;
     align-items: center;
     margin: 30px 0 20px;
     font-size: 14px;
@@ -117,79 +128,67 @@ input[type=checkbox]:disabled + label{
     flex-direction: column;
 }
 .wrap_social_login .btn{
-    height: 50px;
     padding: 11px 0px 11px 12px;
-    position: relative;
-    text-decoration: none;
     color: gray;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
     margin-top: 10px;
+    line-height: 28px;
+    text-align: center;
+}
+/* div 로 감싸고 이미지스프라이트 vs img 태그 로 개별 이미지 */
+.wrap_social_login .div_logo{
+    float: left;
+    background-image: url(../images/css_sprites.png);
+    width: 28px;
+    height: 28px;
+}
+.img_google{
+    background-position: -10px -7px;
+}
+.img_fb{
+    background-position: -90px -7px;
+}
+.img_naver{
+    background-position: -9px -49px;
+}
+.img_kakao{
+    background-position: -50px -7px;
 }
 a.btn1{
     border: gray solid 1px;
     border-radius: 4px;
 }
 a.btn2{
-    border: #73BDE6 solid 1px;
+    border: #2d9cdb solid 1px;
     border-radius: 4px;
 }
 a.btn3{
-    border: #55D465 solid 1px;
+    border: #00bf18 solid 1px;
     border-radius: 4px;
 }
 a.btn4{
-    border: #f2d993 solid 1px;
+    border: #f2c94c solid 1px;
     border-radius: 4px;
 }
-a.btn1:before {
-    content:"";
-    background: url(../images/css_sprites.png) -10px -10px;
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-}
-a.btn2:before {
-    content: "";
-    background: url(./LWH_LION_img/icon_facebook.png) no-repeat center / 13px;
-    width: 20px;
-    height: 26px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-}
-a.btn3:before {
-    content: "";
-    background: url(./LWH_LION_img/icon_naver.png) no-repeat center / 19px;
-    width: 19px;
-    height: 19px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-}
-a.btn4:before {
-    content: "";
-    background: url(./LWH_LION_img/icon_kakao.png) no-repeat center / 18px;
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-}
+/* outline vs box-shaow 뭐가 더 나은지 ? */
 a.btn1:hover{
-    border: gray solid 2px;
+    outline: 1px solid gray;
+    outline-offset: -2px;
     border-radius: 4px;
 }
 a.btn2:hover{
-    border: #73BDE6 solid 2px;
+    outline: 1px solid #2d9cdb;
+    outline-offset: -2px;
     border-radius: 4px;
 }
 a.btn3:hover{
-    border: #55D465 solid 2px;
+    outline: 1px solid #00bf18;
+    outline-offset: -2px;
     border-radius: 4px;
 }
 a.btn4:hover{
-    border: #f2d993 solid 2px;
+    outline: 1px solid #f2c94c;
+    outline-offset: -2px;
     border-radius: 4px;
 }
