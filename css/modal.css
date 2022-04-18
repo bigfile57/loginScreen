@@ -27,20 +27,21 @@ a:visited{
     border: 1px solid #c4c4c4;
     border-radius: 10px;
 }
-header .txt_header{
-    display: inline-block;
+.wrap_header{
+    padding: 20px 0px;
+}
+.wrap_header .txt_header{
     text-align: center;
-    margin: 20px 188px 18px;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
 }
-header .div_close{
+.wrap_header .div_close{
     position: absolute;
     top: 22px;
     right: 24px;
 }
-header .div_close>img{
+.wrap_header .div_close>img{
     width: 18px;
     height: 18px;
 }
@@ -68,7 +69,6 @@ hr{
 
 input[type=checkbox]+label{
     background: url(../images/icon_check_empty.png) no-repeat;
-    display: block;
     cursor: pointer;
     color: gray;
     margin-top: 7px;

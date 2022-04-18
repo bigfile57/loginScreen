@@ -36,10 +36,10 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 27.5px;
-    width: 440px;
+    width: 100%;
     color: white;
     background-color:#2F80ED;
-    padding: 17px 189px 15px 190px;
+    padding: 17px 0px 15px;
     border-radius: 5px;
     
 }
