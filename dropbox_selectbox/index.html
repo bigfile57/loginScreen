@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropbox_selectbox</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    
+    <div class="module-selectBox">
+        <button class="label-select">
+            <strong class="label-text">최애 프로그래밍 언어</strong>
+            <img id="icon-control" src="./icon-Triangle-down.png" >
+        </button>
+        <ul class="wrap-list clicked" id="wrap-list">
+            <li class="list-item"><button type="button">Python</button></li>
+            <li class="list-item"><button type="button">Java</button></li>
+            <li class="list-item"><button type="button">JavaScript</button></li>
+            <li class="list-item"><button type="button">C#</button></li>
+            <li class="list-item"><button type="button">C++</button></li>
+            <li class="list-item"><button type="button">Go</button></li>
+            <li class="list-item"><button type="button">Ruby</button></li>
+        </ul>
+    </div>
+
+    <script>
+        const label = document.getElementById('icon-control');
+        const listControl = document.getElementById('wrap-list');
+        // queryselector 는 정적 콜렉션 (NodeList) 이기 때문에 DOM 변경사항이 실시간 반영안됨
+        // 그래서 clicked를 확인해주기 위해 HTMLCollection(라이브 콜렉션) 사용
+        const selectBox = document.querySelector('.label-select');
+        const selectBoxText = document.querySelector('.label-text');
+        const listItem = document.querySelectorAll('.list-item');
+
+        function inputClickItem(item){
+            selectBoxText.innerText = item.textContent;
+            handleSelectBox();
+            imageControl();
+        }
+        function handleSelectBox(){
+            listControl.classList.toggle("clicked");
+        }
+        function selectBoxOnline(){
+            if(listControl.classList.contains("clicked") != true){
+                    selectBox.style.border = "1px solid #9B51E0";
+                    selectBox.style.outline = "3px solid #F8E4FF";
+                }
+        }
+        function imageControl(){
+            if(listControl.classList.contains("clicked") != true)
+                label.src="./icon-Triangle-down.png"
+            else
+                label.src="./icon-Triangle-up.png";
+        }
+
+        label.addEventListener('click', function() {
+            handleSelectBox();
+            selectBoxOnline();
+            imageControl();
+        });
+
+        listItem.forEach(function(item){
+            item.addEventListener('click', function(e){
+                console.log(e.target.textContent);
+                inputClickItem(item)
+            });
+        })
+
+    </script>
+</body>
+</html>
