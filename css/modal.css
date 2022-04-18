@@ -69,6 +69,7 @@ hr{
 
 input[type=checkbox]+label{
     background: url(../images/icon_check_empty.png) no-repeat;
+    display: inline-block;
     cursor: pointer;
     color: gray;
     margin-top: 7px;
