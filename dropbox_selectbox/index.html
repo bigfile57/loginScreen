@@ -11,7 +11,7 @@
 <body>
     
     <div class="module-selectBox">
-        <button class="label-select">
+        <button class="btn-select">
             <strong class="label-text">최애 프로그래밍 언어</strong>
             <img id="icon-control" src="./icon-Triangle-up.png" >
         </button>
@@ -29,9 +29,10 @@
     <script>
         const label = document.getElementById('icon-control');
         const listControl = document.getElementById('wrap-list');
-        // queryselector 는 정적 콜렉션 (NodeList) 이기 때문에 DOM 변경사항이 실시간 반영안됨
+        // queryselector 는 정적 콜렉션 (NodeList) 이기 때문에 DOM 변경사항이 
+        // 실시간 반영안된단다
         // 그래서 clicked를 확인해주기 위해 HTMLCollection(라이브 콜렉션) 사용
-        const selectBox = document.querySelector('.label-select');
+        const selectBox = document.querySelector('.btn-select');
         const selectBoxText = document.querySelector('.label-text');
         const listItem = document.querySelectorAll('.list-item');
 
