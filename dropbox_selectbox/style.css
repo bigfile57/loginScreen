@@ -31,6 +31,7 @@ button{
     right: 15px;
 }
 .wrap-list{
+    position: absolute;
     width: 200px;
     margin-top: 9px;
     border: 1px solid #c4c4c4;
