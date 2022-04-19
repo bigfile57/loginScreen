@@ -17,7 +17,7 @@ button{
     top: 50%;
     transform: translate(-50%,-50%);
 }
-.label-select{
+.btn-select{
     width: 200px;
     padding: 12px 0px 12px 14px;
     text-align: left;
@@ -25,13 +25,12 @@ button{
     border: 1px solid #c4c4c4;
     border-radius: 10px;
 }
-.label-select img{
+.btn-select img{
     position: absolute;
     top: 17px;
     right: 15px;
 }
 .wrap-list{
-    position: absolute;
     width: 200px;
     margin-top: 9px;
     border: 1px solid #c4c4c4;
