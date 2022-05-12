@@ -19,16 +19,29 @@ button{
 }
 .btn-select{
     width: 200px;
-    padding: 12px 0px 12px 14px;
+    padding: 12px 13px 12px 14px;
     text-align: left;
     background: white;
     border: 1px solid #c4c4c4;
     border-radius: 10px;
 }
-.btn-select img{
-    position: absolute;
-    top: 17px;
-    right: 15px;
+.label-text{
+    font-size: 12px;
+    line-height: 14px;
+}
+.btn-select .div-icon{
+    float: right;
+    margin-top: 2px;
+    width: 14px;
+    height: 14px;
+}
+.closed{
+    background: url('./icon-Triangle-down.png');
+    background-repeat: no-repeat;
+}
+.open{
+    background: url('./icon-Triangle-up.png');
+    background-repeat: no-repeat;
 }
 .wrap-list{
     position: absolute;
@@ -46,6 +59,11 @@ button{
 }
 .clicked{
     display: none;
+    
+}
+.outline{
+    border: 2px solid #9B51E0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
 }
 .wrap-list .list-item{
     font-size: 14px;

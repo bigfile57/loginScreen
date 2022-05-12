@@ -13,25 +13,26 @@
     <div class="module-selectBox">
         <button class="btn-select">
             <strong class="label-text">최애 프로그래밍 언어</strong>
-            <img id="icon-control" src="./icon-Triangle-up.png" alt="리스트열기닫기">
+            <div id="icon-control" class="div-icon closed"></div>
         </button>
         <ul class="wrap-list clicked" id="wrap-list">
-            <li class="list-item"><button type="button">Python</button></li>
-            <li class="list-item"><button type="button">Java</button></li>
-            <li class="list-item"><button type="button">JavaScript</button></li>
-            <li class="list-item"><button type="button">C#</button></li>
-            <li class="list-item"><button type="button">C++</button></li>
-            <li class="list-item"><button type="button">Go</button></li>
-            <li class="list-item"><button type="button">Ruby</button></li>
+            <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C++</button></li>
+            <li><button type="button">Go</button></li>
+            <li><button type="button">Ruby</button></li>
         </ul>
     </div>
 
-    <script>
+    <!-- <script>
         const label = document.getElementById('icon-control');
         const listControl = document.getElementById('wrap-list');
         // queryselector 는 정적 콜렉션 (NodeList) 이기 때문에 DOM 변경사항이 
         // 실시간 반영안된단다
         // 그래서 clicked를 확인해주기 위해 HTMLCollection(라이브 콜렉션) 사용
+        //childNode 사용해도됨
         const selectBox = document.querySelector('.btn-select');
         const selectBoxText = document.querySelector('.label-text');
         const listItem = document.querySelectorAll('.list-item');
@@ -70,6 +71,7 @@
             });
         })
 
-    </script>
+    </script> -->
+    <script src="control.js"></script>
 </body>
 </html>
