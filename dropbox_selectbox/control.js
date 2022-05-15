@@ -1,76 +1,46 @@
-
-// queryselector 는 정적 콜렉션 (NodeList) 이기 때문에 DOM 변경사항이 
-// 실시간 반영안된단다
-// 그래서 clicked를 확인해주기 위해 HTMLCollection(라이브 콜렉션) 사용
-//childNode 사용해도됨
-const icon_control = document.querySelector('#icon-control');
-// const list_control = document.querySelector('#wrap-list').childNodes;
 const list_control = document.getElementById('wrap-list');
+const listContent = list_control.childNodes;
+// list_control 의 li 부분만 빼내려고 따로 변수에 저장
+// const list_control = document.querySelectorAll('ul li');
 const labelBox = document.querySelector('.btn-select');
 const label = document.querySelector('.label-text');
+const icon_control = document.querySelector('#icon-control');
 
-let listContent = list_control.childNodes;
 
+// selectBox 테두리 색 컨트롤
 let inputFocus = () =>{
     labelBox.classList.toggle('outline');
 }
+// selectBox list 부분 열렸다 닫혔다
 let controlList = () => {
     list_control.classList.toggle('clicked');
-    console.log("controlList");
     inputFocus();
-    console.log(label.childNodes[0].nodeValue);
 } 
 
-console.log(icon_control);
-console.log(list_control);
-console.log(listContent);
-console.log(label.childNodes[0].nodeValue);
+// selectBox list 부분 열렸다 닫혔다 icon 위아래 컨트롤
+// close 아래아이콘 , open 위 아이콘
+let controlIcon = () => {
+    icon_control.classList.toggle('open');
+    // controlList();
+}
 
-icon_control.addEventListener('click', (e)=>{
+// 아이콘 클릭이벤트, 아이콘을 바꿔주고 selectBox 내용 열어주기
+icon_control.addEventListener('click', ()=>{
     console.log("icon clicked");
-    console.log(e.target.classList);
-    e.target.classList.toggle('open');
+    controlIcon();
     controlList();
 })
-// listContent.forEach(e => {
-//     e.addEventListener('mouseover',()=>{
-//         label.textContent = e.textContent;
-//         console.log(e);
-//         e.addEventListener('click',controlList);
-//     })
-// });
+// select list 내용 마우스로 올리면 label 에 해당 text 뜨도록하는 함수
 listContent.forEach(e => {
     e.addEventListener('mouseover',()=>{
         label.textContent = e.textContent;
     })
 });
+// select list 내용 클릭하면 영역 닫히고 클릭한 내용 뜨도록 하는 함수
 listContent.forEach(e => {
     e.addEventListener('click',()=>{
+        console.log("list-clicked");
         controlList();
+        controlIcon();
     })
 });
-// click 다음 함수에 ()=>{ controlList()} 를 해주면 잘 작동하지않음 
-// 아무래도 이유를 모르겠다. hover event가 계속 발동하면서 씹히는거 같긴하다
-//
-// wrap-list 를 querySelectorAll 로 하면 어떻게 될까 ?
-
-
-// list_control.addEventListener('mouseover',(e)=>{
-//     label.textContent = e.target.textContent;
-//     // e.addEventListener('click',controlList());
-// })
-
-// list_control.forEach(e => {
-//     e.addEventListener('click',()=>{
-//         console.log(e);
-//     })
-// });
-
-
-
-
-
-// let iconReset = (e) => {
-//     e.target.classList.remove('open');
-//     console.log(e.target.classList);
-// }
